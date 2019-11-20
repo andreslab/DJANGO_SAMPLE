@@ -20,5 +20,7 @@ from apps.libro.views import Home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('libro/',include(('apps.libro.urls', 'libro'))),
-    path('home/', Home, name = 'index')
+    path('record/',include(('apps.record.urls', 'record'))),
+    path('dashboard/',include(('apps.dashboard.urls', 'dashboard'))),
+    path('home/', Home, name = 'index'),
 ]
