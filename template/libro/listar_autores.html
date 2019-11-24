@@ -25,6 +25,7 @@
                     <th>{{ autor.nacionalidad }}</th>
                     <th>{{ autor.descripcion }}</th>
                     <th><a href="{% url 'libro:editar_autor' autor.id %}">Editar</a></th>
+                    <th><a href="{% url 'libro:eliminar_autor' autor.id %}">Eliminar</a></th>
                 </tr>
                 {% endfor %}
             </tbody>

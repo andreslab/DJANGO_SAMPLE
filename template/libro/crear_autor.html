@@ -11,14 +11,14 @@
             <h2>{{ error }}</h2>
         {% else %}
             {{ autor_form_view.as_p }} 
+            <button type="submit">Crear</button>
         {% endif %}
-        <button type="submit"></button>
     </form>
     <br>
     <br>
     <form method="POST">
         {% csrf_token %}
         {{ autor_form_view.as_table }} 
-        <button type="submit"></button>
+        <button type="submit">Crear</button>
     </form>
 {% endblock body %}
