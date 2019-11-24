@@ -6,7 +6,12 @@
 {% block body %}
     <form method="POST">
         {% csrf_token %} <!--solo para pruebas de envio de datos, el paquete csrf por defecto no deja sin re<lizar ajustes de seguridad-->
-        {{ autor_form_view.as_p }} 
+        
+        {% if error %}
+            <h2>{{ error }}</h2>
+        {% else %}
+            {{ autor_form_view.as_p }} 
+        {% endif %}
         <button type="submit"></button>
     </form>
     <br>
